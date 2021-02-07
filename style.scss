@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary: #395b83;
+$secondary: #0a3458;
+$light: #f2f2f2;
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.margin-set {
+  margin: 0 300px;
+}
+
+.header {
+  position: static;
+  height: 30vh;
+  display: grid;
+  grid-template-rows: 2fr 3fr 6fr 1fr;
+}
+
+.header-top {
+  background: $primary;
+  color: white;
+}
+.header-navbar {
+  background: $secondary;
+  color: white;
+
+  img {
+    width: 80px;
+  }
+}
+.header-image {
+  background: yellow;
+  overflow: hidden;
+}
+.header-screen {
+  background: $light;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    color: white;
+  }
+  .nav-items {
+    li {
+      margin: 0 10px;
+    }
+  }
+  .nav-extras {
+    i {
+      padding: 10px;
+    }
+  }
+}
+
+.main {
+  // height: 1200px;
+
+  margin: 20px 300px;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  grid-gap: 15px;
+}
+
+.main-filter {
+  .filter-title {
+    border-radius: 10px;
+    background: $secondary;
+    color: white;
+    padding: 15px 20px;
+  }
+
+  .filter-actions {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+    margin-top: 3px;
+    background: $light;
+    height: 200px;
+
+    button {
+      background: red;
+      color: white;
+      padding: 5px;
+      width: 80%;
+      margin-right: 0;
+    }
+
+    select {
+      padding: 5px;
+    }
+  }
+}
+
+#main-offer-sort {
+  display: flex;
+  justify-content: space-between;
+  background: $light;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+
+  select {
+    padding: 3px;
+  }
+}
+
+#main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.card {
+  // background: wheat;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  padding: 20px;
+  height: 300px;
+  color: black;
+
+  display: grid;
+  grid-template-rows: 2fr 6fr 1fr;
+
+  img {
+    width: 300px;
+  }
+
+  .card-title {
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+#pagination-view {
+  display: flex;
+  justify-content: flex-end;
+  // margin-right: 300px;
+  position: relative;
+  right: 300px;
+}
+
+////////////  footer style
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background: $light;
+  height: 200px;
+  padding: 30px 30px 20px 30px;
+
+  ul {
+    margin-right: 100px;
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+.nav-items li,
+.nav-extras li {
+  display: inline;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Assigment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="simplePagination.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top center">
+        <p class="margin-set">Help-line +91 9900112233</p>
+      </div>
+
+      <div class="header-navbar">
+        <nav class="margin-set">
+          <!-- <h1 class="logo">Logo</h1> -->
+          <img src="res/carlogo.png" alt="" />
+          <ul class="nav-items center">
+            <li class="nav-item1">Home</li>
+            <li class="nav-item2">Our Cars</li>
+            <li class="nav-item3">Reviews</li>
+            <li class="nav-item4">About</li>
+            <li class="nav-item3">Pages</li>
+            <li class="nav-item4">Contact Us</li>
+          </ul>
+          <ul class="nav-extras center">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-shopping-cart"></i>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-image">
+        <img src="res/cars.jpg" alt="" />
+      </div>
+
+      <div class="header-screen">
+        <p class="margin-set">Home/Our Cars</p>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="main-filter">
+        <div class="filter-title">Filters</div>
+        <div class="filter-actions">
+          <select name="fuelType" id="select-fuel-type">
+            <option value="none">Fuel Type</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Deisel</option>
+          </select>
+          <br />
+          <select name="gearbox" id="select-gearbox">
+            <option value="none">Gear Box</option>
+            <option value="manual">Manual</option>
+            <option value="auto">Auto</option>
+          </select>
+          <br />
+          <div class="slidecontainer">
+            <p>Horsepower:</p>
+            <input type="range" id="slider" min="1" max="100" value="50" />
+          </div>
+          <div id="slider-point"></div>
+          <br />
+          <button onclick="applyFilter(event)">
+            Apply Filter <span id="arrow">🠒</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="main-right">
+        <div id="main-offer-sort">
+          <span id="main-offer">Available Offers</span>
+
+          <select id="main-sort" onchange="applySort()">
+            <option value="hp">Horsepower</option>
+            <option value="year">Make Year</option>
+          </select>
+        </div>
+
+        <div id="main-content"></div>
+      </div>
+
+      <!-- IT DOES NOT RENDER -->
+      <template id="card-container">
+        <div class="card">
+          <div class="card-title">QWERTY</div>
+          <img src="" alt="car img" />
+          <div class="card-details">
+            <div class="category">Sports</div>
+            <div class="gearbox">Auto</div>
+            <div class="capacity">2 Passengers</div>
+            <div class="fuel-type">Gasoline</div>
+            <div class="year">year</div>
+            <div class="horsepower">HP</div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <div id="pagination-view"></div>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Contact Us</h2>
+          <ul class="nav__ul">
+            <li>Main Office Address:</li>
+            <li>Other Address:</li>
+            <li>contact@motors.com</li>
+          </ul>
+        </li>
+
+        <li class="nav__item">
+          <h2 class="nav__title">Information</h2>
+          <ul class="nav__ul nav__ul--extra">
+            <li>Cars catalog</li>
+            <li>About Us</li>
+            <li>FAQ</li>
+          </ul>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.simplePagination.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
