@@ -108,6 +108,13 @@ nav .nav-extras i {
   padding: 5px;
   width: 80%;
   margin-right: 0;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 14px 10px;
+  -webkit-box-shadow: -1px -5px 14px #0000006b;
+          box-shadow: -1px -5px 14px #0000006b;
 }
 
 .main-filter .filter-actions select {
