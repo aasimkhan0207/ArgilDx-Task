@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .center {
@@ -98,7 +99,7 @@ nav .nav-extras i {
   padding: 15px;
   margin-top: 3px;
   background: #f2f2f2;
-  height: 200px;
+  height: 250px;
 }
 
 .main-filter .filter-actions button {

@@ -5,7 +5,7 @@ const cardTemplate = document.getElementById("card-container");
 const slider = document.getElementById("slider");
 const showSlider = document.getElementById("slider-point");
 
-let data_all = [];
+let data_all = []; // all data
 let screen_data = [];
 
 // Pagination
@@ -37,6 +37,7 @@ function sortData(arr, param) {
   }
 }
 
+// Function to apply sort and display
 function applySort() {
   let param = document.getElementById("main-sort").value;
   sortData(screen_data, param);
@@ -64,7 +65,7 @@ function fetchAPI(callback) {
     });
 }
 
-// Function create a card
+// Function to create a card
 function createCard(car) {
   const {
     Capacity,
@@ -111,12 +112,12 @@ function displayContent(data) {
   paginate();
 }
 
+// Get min and max values from array of objects
 function max_min_val(arr) {
   if (!arr) {
     console.log("no result");
     return null;
   }
-
   let min = 1000000;
   let max = -1;
 
@@ -125,7 +126,6 @@ function max_min_val(arr) {
     if (Horsepower >= max) max = Horsepower;
     if (Horsepower <= min) min = Horsepower;
   });
-
   return { min: min, max: max };
 }
 
@@ -141,12 +141,12 @@ function setSlider() {
   showSlider.innerHTML = min + " HP";
 }
 
-// SLIDER show
+// show SLIDER value
 slider.oninput = function () {
   showSlider.innerHTML = `${this.value} HP`;
 };
 
-// Fetch All and Display
+// Fetch All and Display (executes initially)
 function loadCarsData() {
   fetchAPI((err, data) => {
     if (err) {
@@ -158,7 +158,6 @@ function loadCarsData() {
       screen_data = data.slice();
 
       // sort by HP desc.
-      //data.sort((a, b) => b.Horsepower - a.Horsepower);
       sortData(data, "hp");
 
       displayContent(data);

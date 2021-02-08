@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 $primary: #395b83;
@@ -78,7 +79,6 @@ nav {
     color: white;
     padding: 15px 20px;
   }
-
   .filter-actions {
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ nav {
     padding: 15px;
     margin-top: 3px;
     background: $light;
-    height: 200px;
+    height: 250px;
 
     button {
       background: red;
@@ -156,7 +156,7 @@ nav {
   right: 300px;
 }
 
-////////////  footer style
+///////  footer style
 
 .footer {
   display: flex;
